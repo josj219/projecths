@@ -1,0 +1,19 @@
+header
+    nav.main-nav
+        ul.main-nav-list
+            li
+                a(href="/") Home
+            li
+                a.main-nav-link(href='/videos') Videos
+            li
+                a.main-nav-link(href='/search') Search
+            if loggedIn
+                li
+                    a(href=`/users/${loggedInUser._id}`) My Profile
+                li
+                    a(href="/users/edit") Edit Profile
+                li
+                    a(href="/users/logout")  Log Out
+            else
+                li
+                    a(href="/login")  Login
