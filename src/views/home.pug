@@ -1,6 +1,142 @@
-extends base
+extends layouts/base
 include mixins/video
 
 
 block content
-    h1 home
+    section.section-hero
+        .hero.container.grid.grid--2-cols
+            .hero-img-box
+                img.hero-img(src='img/img_01.jpg')
+            .hero-text-box
+                h1.heading-primary
+                    span.name_force HYO
+                    | rin &#x2764;
+                    span.name_force SUNG
+                    | jae
+                p.hero-description
+                    span We&apos;ve been together for 
+                    span.day-count 000
+                    span days
+    section.section-video
+        .videos.container.grid.grid--3-cols
+            .video
+                img.video-img(src='img/video_01.png' alt='1st video')
+                ul.video-message
+                    p.where At ddd
+                    span.when 2days ago
+            .video
+                img.video-img(src='img/video_01.png' alt='1st video')
+                ul.video-message
+                    p.where At ddd
+                    span.when 2days ago
+            .video
+                img.video-img(src='img/video_01.png' alt='1st video')
+                ul.video-message
+                    p.where At ddd
+                    span.when 2days ago
+    section.section-gallery
+        .gallery.container
+            .gallery_img
+            .gallery_img
+            .gallery_img
+            .gallery_img
+    section.section-wtd
+        .wtd.grid.container.grid--3-cols
+            .wd-lists
+                h1.wd-lists-title.heading-primary What we Did
+                .wd-lists-li
+                    ul
+                        li
+                            ion-icon(name='checkbox-outline')
+                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
+                        li
+                            ion-icon(name='checkbox-outline')
+                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
+                        li
+                            ion-icon(name='checkbox-outline')
+                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
+            .wtd-lists
+                h1.wtd-lists-title.heading-primary What To Do
+                .wtd-lists-li
+                    ul
+                        li
+                            ion-icon(name='square-outline')
+                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
+                        li
+                            ion-icon(name='square-outline')
+                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
+                        li
+                            ion-icon(name='square-outline')
+                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
+            .section-calendar
+                .calendar
+                    h1.calendar-month.heading-primary 11
+                    .date
+                        .day S
+                        .day M
+                        .day T
+                        .day W
+                        .day T
+                        .day F
+                        .day S
+                        .number 1
+                        .number 2
+                        .number 3
+                        .number 4
+                        .number.active 5
+                        .number 6
+                        .number 7
+                        .number 8
+                        .number 9
+                        .number 10
+                        .number 11
+                        .number 12
+                        .number 13
+                        .number 14
+                        .number 15
+                        .number 16
+                        .number 17
+                        .number 18
+                        .number 19
+                        .number 20
+                        .number 21
+                        .number 22
+                        .number 23
+                        .number 24
+                        .number 25
+                        .number 26
+                        .number 27
+                        .number 28
+                        .number 29
+                        .number 30
+        section.section-review
+            .reviews.container
+                h1.review-title.heading-primary After watching ...
+                .review.grid
+                    .img-movie
+                        img(src='img/movie/oldmen.jfif' alt='')
+                    .review-movie
+                        figure.figure-review
+                            .review-img-wrapper
+                                img.reviewer-img(alt='h' src='img/h.png')
+                            blockquote.review-text
+                                .review-stars
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star-half-alt
+                                | Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                p.review-name &mdash; Pyeongsik Bang
+                        figure.figure-review
+                            .review-img-wrapper
+                                img.reviewer-img(alt='h' src='img/h.png')
+                            blockquote.review-text
+                                .review-stars
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star-half-alt
+                                    i.far.fa-star
+                                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor doloribus nemo, quidem consequuntur ratione expedita voluptate
+                                p.review-name &mdash; Dongjin Jo

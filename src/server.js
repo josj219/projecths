@@ -6,6 +6,9 @@ import {localsMiddleware} from "./middlewares";
 import globalRouter from "./routers/globalRouter";
 import videoRouter from "./routers/videoRouter";
 import userRouter from "./routers/userRouter"
+import galleryRouter from "./routers/galleryRouter"
+import scheduleRouter from "./routers/scheduleRouter"
+import reviewRouter from "./routers/reviewRouter"
 
 const app = express();
 const logger = morgan("dev");
@@ -26,9 +29,13 @@ app.use(
 
 app.use(localsMiddleware);
 app.use("/uploads", express.static("uploads"));
+app.use("/img", express.static("img"));
 app.use("/static", express.static("assets"));
 app.use("/", globalRouter);
 app.use("/users", userRouter);
 app.use("/videos", videoRouter);
+app.use("/gallery", galleryRouter);
+app.use("/reviews", reviewRouter);
+app.use("/schedule", scheduleRouter);
 
 export default app;

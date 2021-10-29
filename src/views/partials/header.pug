@@ -7,6 +7,13 @@ header
                 a.main-nav-link(href='/videos') Videos
             li
                 a.main-nav-link(href='/search') Search
+            li
+                a.main-nav-link(href='/gallery') Gallery
+            li
+                a.main-nav-link(href='/search') Schedule
+            li
+                a.main-nav-link(href='/review') Review
+            
             if loggedIn
                 li
                     a(href=`/users/${loggedInUser._id}`) My Profile

@@ -1,0 +1,10 @@
+mixin photo(photo)
+    div
+        h4
+            a(href=`/gallery/${photo.id}`)=photo.title
+        p=photo.description
+        ul
+            each hashtag in photo.hashtags
+                li=hashtag
+        small=photo.createdAt
+        hr 

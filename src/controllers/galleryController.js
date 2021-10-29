@@ -1,11 +1,68 @@
-import Video from "../models/Video";
-import User from "../models/User";
+import Photo from "../models/Photo";
+//import User from "../models/User";
 
-export const videoHome = async(req, res) => 
+export const galleryHome = async(req, res) => 
 {
-    const videoList = await Video.find({}).sort({ createdAt: "desc" });;
-    return res.render("videos/videoList", { pageTitle: "watch", videoList });      
+    const photoList = await Photo.find({}).sort({ createdAt: "desc" });;
+    return res.render("gallery/photoList", { pageTitle: "watch", photoList });      
 }
+
+export const getUploadGallery = (req,res) =>
+{
+    return res.render("gallery/upload", { pageTitle: "Upload Photo" });
+
+}
+
+export const postUploadGallery = async (req,res) =>
+{
+    const {
+        user: { _id },
+      } = req.session;
+      const { path: fileUrl } = req.file;
+      const { title, description, hashtags } = req.body;
+      
+      try{
+        const newPhoto = await Photo.create({
+          title,
+          description,
+          fileUrl,
+          owner: _id,
+          createdAt:123,
+          hashtags: Photo.formatHashtags(hashtags),
+          meta: {
+            views: 0,
+            rating: 0,
+          },
+        });
+        const user = await User.findById(_id);
+        user.photos.push(Photo._id);
+        user.save();
+        console.log(newPhoto);
+        return res.redirect("/gallery");
+      } catch (error) {
+        return res.status(400).render("gallery/upload", {
+          pageTitle: "Upload Video",
+          errorMessage: error._message,
+        });
+      }
+}
+
+
+export const galleryWatch = async (req,res) => {
+    const { id } = req.params;
+    const photo = await Photo.findById(id).populate("owner");
+    console.log(photo);
+    if (!photo) {
+      return res.render("404", { pageTitle: "Photo not found." });
+    }
+    return res.render("gallery/watch", { pageTitle: photo.title, photo });
+}
+
+// galleryHome,postEditGallery,getEditGallery,,galleryWatch
+
+// Model 필요 -> Upload - 할 때 DB 로 업로드 되도록 -> upload 폴더 내 디렉토리 생성
+
+//////////////////////////////////////////////////////////////////////////////////
 
 export const watch = async (req,res) => {
     const { id } = req.params;
@@ -106,19 +163,3 @@ export const postUpload = async (req, res) => {
     await Video.findByIdAndDelete(id);
     return res.redirect("/");
   };
-
-  export const search = async (req, res) => {
-    const { keyword } = req.query;
-    let videos = [];
-    if (keyword) {
-      const suser = await User.find({});
-      console.log(suser);
-      videos = await Video.find({
-        title:{
-          $regex: new RegExp(`${keyword}$`,"i"),
-        },
-      })
-    }
-    return res.render("search", { pageTitle: "Search",videos });
-  };
-  

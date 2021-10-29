@@ -1,3 +1,2 @@
-import "../css/a.css";
-
-alert("hi");
+import "../css/style.css";
+import "../css/general.css";
