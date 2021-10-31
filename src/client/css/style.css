@@ -1,10 +1,20 @@
+@import "./menu/gallery.css";
+@import "./menu/review.css";
+
+body {
+  background-color: #48457e;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff9db;
+  background-color: #48457e;
   height: 9.6rem;
   padding: 0 4.8rem;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 }
 
 .logo-img {
@@ -24,9 +34,19 @@ header {
 .main-nav-link:visited {
   text-decoration: none;
   color: #ffd43b;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 2.4rem;
   transition: all 0.3s;
+}
+
+.Login:link,
+.Logout:link,
+.Login:visited,
+.Logout:visited {
+  padding: 0.8rem 1.8rem;
+  background-color: #ffd43b;
+  border-radius: 0.8rem;
+  color: #48457e;
 }
 
 .main-nav-link:hover,
@@ -35,13 +55,19 @@ header {
 }
 
 .section-hero {
-  padding: 9.6rem 0 9.6rem 0;
-  background-color: #fff9db;
+  padding: 7.2rem 0;
+  background-color: #48457e;
+  height: 90vh;
 }
 
 .hero {
   margin-bottom: 3.2rem;
   letter-spacing: -0.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 .name_force {
@@ -49,6 +75,7 @@ header {
 }
 
 .hero-img-box {
+  width: 70rem;
   overflow: hidden;
   border-radius: 11px;
 }
@@ -60,23 +87,25 @@ header {
 }
 
 .hero-text-box {
+  padding-top: 4.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
+.hero-name {
+  font-style: italic;
+}
+
 .hero-description {
-  font-size: 3.6rem;
+  font-size: 2.8rem;
   font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 .day-count {
-  color: #9775fa;
+  color: #ffd43b;
 }
 
 .section-wtd {
@@ -187,11 +216,29 @@ header {
   padding: 9.6rem 0;
 }
 
-.video {
+.video-cell {
+  background-color: #8d81d4;
+  height: 36rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
   transition: all 0.4s;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+.video-itself {
+  height: 100%;
+}
+
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videos-list {
+  grid-template-rows: auto;
 }
 
 .video-img {
@@ -204,23 +251,64 @@ header {
   flex-direction: column;
 }
 
-.video-message .where {
-  font-size: 2.4rem;
-  color: #333;
+.video-message .video-where {
+  color: #ffd43b;
+  font-size: 3.2rem;
   font-weight: 600;
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.6rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
 }
 
-.video-message .when {
+.video-message .video-description {
+  font-size: 2.4rem;
+}
+
+.video-message .video-hashtags {
+  list-style: none;
+  color: #ffd43b;
+  display: flex;
+  line-height: 1.3rem;
+  padding-top: 0.8rem;
+  font-size: 1.8rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.video-message .video-when {
   display: inline-block;
   align-self: end;
   padding: 0.4rem 0.8rem;
   font-size: 1.2rem;
   text-transform: uppercase;
-  color: #333;
   border-radius: 5px;
   font-weight: 500;
-  background-color: yellow;
+  text-decoration: none;
+}
+
+.video-link:link,
+.video-link:visited {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2.4rem;
+  transition: all 0.3s;
+}
+
+.video-icon {
+  position: absolute;
+  font-size: 3rem;
+  top: 40%;
+  left: 45%;
+  object-fit: cover;
+  transition: all 0s;
+  display: none;
+}
+
+.video-cell:hover,
+.video-cell:active {
+  transform: scale(1.05);
 }
 
 /*      section video     */
@@ -297,6 +385,26 @@ header {
   justify-content: space-between;
   font-size: 1.6rem;
   color: #6f6f6f;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+.image-gallery a {
+  width: 100%;
+  height: 25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 /* footer */

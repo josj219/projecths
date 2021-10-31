@@ -1,15 +1,17 @@
 extends ../layouts/base
 
 block content
-    image(src="/" + photo.fileUrl)
-    h1=photo.title
-    div
-        p=photo.description
-        small=photo.createdAt
-    div
-        small Uploaded by 
-            a(href=`/users/${photo.owner._id}`)=photo.owner.name
-    if String(photo.owner._id) === String(loggedInUser._id)
-        a(href=`${photo.id}/edit`) Edit Photo &rarr;
-        br
-        a(href=`${photo.id}/delete`) Delete Photo &rarr;
+    .container
+        .photo-watch
+            img(src="/" + photo.fileUrl).photo-img
+            h1=photo.title
+            div
+                p=photo.description
+                small=photo.createdAt
+            div
+                small Uploaded by 
+                    a(href=`/users/${photo.owner._id}`)=photo.owner.name
+    //- if String(photo.owner._id) === String(loggedInUser._id)
+    //-     a(href=`${photo.id}/edit`) Edit Photo &rarr;
+    //-     br
+    //-     a(href=`${photo.id}/delete`) Delete Photo &rarr;

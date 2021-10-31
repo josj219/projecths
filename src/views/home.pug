@@ -4,32 +4,32 @@ include mixins/video
 
 block content
     section.section-hero
-        .hero.container.grid.grid--2-cols
+        .hero.container
             .hero-img-box
                 img.hero-img(src='img/img_01.jpg')
             .hero-text-box
-                h1.heading-primary
+                h1.heading-primary.hero-name
                     span.name_force HYO
-                    | rin &#x2764;
+                    | rin & 
                     span.name_force SUNG
                     | jae
                 p.hero-description
-                    span We&apos;ve been together for 
+                    | We&apos;ve been together for  
                     span.day-count 000
-                    span days
+                    |   days
     section.section-video
         .videos.container.grid.grid--3-cols
-            .video
+            .video-cell
                 img.video-img(src='img/video_01.png' alt='1st video')
                 ul.video-message
                     p.where At ddd
                     span.when 2days ago
-            .video
+            .video-cell
                 img.video-img(src='img/video_01.png' alt='1st video')
                 ul.video-message
                     p.where At ddd
                     span.when 2days ago
-            .video
+            .video-cell
                 img.video-img(src='img/video_01.png' alt='1st video')
                 ul.video-message
                     p.where At ddd

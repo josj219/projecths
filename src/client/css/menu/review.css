@@ -1,0 +1,42 @@
+.review-container {
+  width: 100%;
+  padding: 15rem 25rem;
+  margin: 0 auto;
+}
+
+.review-mixin {
+  width: 80rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+.review-mixin {
+  width: 100%;
+}
+
+.review-poster img {
+  width: 100%;
+}
+
+.review-result {
+  grid-column: 2/-1;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.review-movieName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.2rem;
+}
+
+.review-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8rem;
+}

@@ -1,26 +1,20 @@
 header
+    a(href="/")
+        img(src='img/logo.png' class="logo-img")
     nav.main-nav
         ul.main-nav-list
             li
-                a(href="/") Home
-            li
                 a.main-nav-link(href='/videos') Videos
-            li
-                a.main-nav-link(href='/search') Search
             li
                 a.main-nav-link(href='/gallery') Gallery
             li
-                a.main-nav-link(href='/search') Schedule
+                a.main-nav-link(href='/schedule') Schedule
             li
-                a.main-nav-link(href='/review') Review
+                a.main-nav-link(href='/reviews') Review
             
             if loggedIn
                 li
-                    a(href=`/users/${loggedInUser._id}`) My Profile
-                li
-                    a(href="/users/edit") Edit Profile
-                li
-                    a(href="/users/logout")  Log Out
+                    a.main-nav-link.Logout(href="/users/logout")  Logout
             else
                 li
-                    a(href="/login")  Login
+                    a.main-nav-link.Login(href="/login")  Login

@@ -3,11 +3,24 @@ include ../mixins/photo
 
 
 block content
-    each potato in photoList
-        +photo(potato)
-    else
-        li Sorry nothing found. 
-    nav 
-        ul
-            li
-                a(href="/gallery/upload") Upload Photo
+    .image-container
+        .container
+            h1 PHOTO LIST
+            .image-gallery
+                each photo in photoList
+                    +photo(photo)
+                else
+                    span.empty__message No Image found 
+            nav 
+                ul
+                    li
+                        a(href="gallery/upload") Upload Image
+
+//-   .image-gallery
+//-                 a(href="img/gallery/img-1.jpg").img-1
+//-                     ion-icon(name='expand-outline')
+//-                 a(href="img/gallery/img-2.jpg").img-2
+//-                     ion-icon(name='expand-outline')
+//-                 a(href="img/gallery/img-3.jpg").img-3
+//-                     ion-icon(name='expand-outline')
+          

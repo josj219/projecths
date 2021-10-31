@@ -72,7 +72,7 @@ body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  color: rgb(175, 175, 224);
 }
 
 .container {
@@ -117,16 +117,16 @@ body {
 .heading-secondary,
 .heading-tertiary {
   font-weight: 700;
-  color: #333;
+  color: rgba(235, 255, 180, 0.486);
   /* color: #45260a; */
   /* color: #343a40; */
-  letter-spacing: -0.5px;
+  letter-spacing: -0.2px;
 }
 
 .heading-primary {
-  font-size: 5.2rem;
+  font-size: 4.4rem;
   line-height: 1.05;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.4rem;
 }
 
 .heading-secondary {
