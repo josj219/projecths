@@ -1,0 +1,8 @@
+mixin review-page(review)
+     .review-page-mixin
+        .review-page-poster
+            a(href=`/gallery/${review.id}`)
+                img(src="/"+review.fileUrl)
+        .review-page-result
+            .review-movieName #{review.movieName}No country
+            .review-page-avgscore #{avg}

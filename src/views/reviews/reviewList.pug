@@ -3,29 +3,14 @@ include ../mixins/review
 
 
 block content
-    .review-container
-        .movie-reviews
-            each potato in reviewList
-                +review(potato)
-            else
-                li Sorry nothing found. 
-            nav 
-                ul
-                    li
-                        a(href="/reviews/upload") Upload Review
-    //- .image-container
-    //-     .container
-    //-         h1 PHOTO LIST
-    //-         .image-gallery
-    //-             each photo in photoList
-    //-                 +photo(photo)
-    //-             else
-    //-                 span.empty__message No Image found 
-    //-             //-  .photo-mixin
-    //-             //-     a(href=`/gallery/${photo.id}`)
-    //-             //-         ion-icon(name='expand-outline')
-    //-             //-         img(src="/"+photo.fileUrl)
-    //-         nav 
-    //-             ul
-    //-                 li
-    //-                     a(href="gallery/upload") Upload Image
+    section.review-section 
+        .container
+            .movie-reviews.grid.grid--2-cols
+                each potato in reviewList
+                    +review(potato)
+                else
+                    li Sorry nothing found. 
+                nav 
+                    ul
+                        li
+                            a(href="/reviews/upload") Upload Review
