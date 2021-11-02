@@ -5,20 +5,20 @@ include ../mixins/did
 block content
     section.section-todo
         .container
-            h4.js-greetings.greetings.to-do
-            form(method="POST", enctype="multipart/form-data")
-                input(type='text' placeholder='Write a to do' name="doto")
-                input(type="submit", value="New") 
-            .js-toDoList.list
-                ul
-                    each schedule in scheduleList
-                        if schedule.status == 0
-                            +todo(schedule)
-            .js-DidList.list 
-                ul
-                    each schedule in scheduleList
-                        if schedule.status == 1
-                            +did(schedule)
+            .form-container
+                form(method="POST", enctype="multipart/form-data")
+                    input(type='text' placeholder='Write a to do' name="doto")
+                    input(type="submit", value="New") 
+                .js-toDoList.list
+                    ul
+                        each schedule in scheduleList
+                            if schedule.status == 0
+                                +todo(schedule)
+                .js-DidList.list 
+                    ul
+                        each schedule in scheduleList
+                            if schedule.status == 1
+                                +did(schedule)
                 
 
 

@@ -1,5 +1,5 @@
 extends ../layouts/base
-include ../mixins/review
+include ../mixins/review-page
 
 
 block content
@@ -7,7 +7,7 @@ block content
         .container
             .movie-reviews.grid.grid--2-cols
                 each potato in reviewList
-                    +review(potato)
+                    +review-page(potato)
                 else
                     li Sorry nothing found. 
                 nav 

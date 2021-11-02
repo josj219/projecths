@@ -88,3 +88,45 @@
   align-items: center;
   font-size: 2.8rem;
 }
+
+.review-page-mixin {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 1.8rem 2.4rem;
+  background-color: var(--lightpurple);
+  border-radius: 1.5rem;
+  height: 28rem;
+}
+
+.review-page-poster {
+  width: 20rem;
+  height: 28rem;
+}
+
+.poster-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-page-result {
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+}
+
+.review-movieName {
+  color: var(--yellow);
+  font-size: 3.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-page-avgscore {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15%;
+  color: var(--lightyellow);
+}

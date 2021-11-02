@@ -8,6 +8,7 @@ const reviewSchema = new mongoose.Schema({
   bang_score: { type: Number, required: true },
   jo_comment: { type: String, required: true, trim: true },
   jo_score: { type: Number, required: true },
+  avg_score: {type:Number, default:0}
 });
 
 reviewSchema.static("formatHashtags", function (hashtags) {
