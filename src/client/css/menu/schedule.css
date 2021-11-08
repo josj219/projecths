@@ -1,0 +1,44 @@
+.section-todo .form-container {
+  margin-top: 0.2rem;
+}
+
+.todo-Lists {
+  margin-top: 4.8rem;
+  width: 100%;
+  min-height: 40rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: var(--darkgrey);
+  font-size: 2rem;
+}
+
+.todo-Lists h1 {
+  padding: 3rem;
+  font-size: 3.6rem;
+  color: var(--lightyellow);
+  font-weight: 600;
+  text-align: center;
+}
+
+.js-toDoList {
+  background-color: var(--lightpurple);
+}
+
+.js-DidList {
+  background-color: var(--grey);
+}
+
+.didlists {
+  text-decoration: line-through;
+}
+
+.lists {
+  width: 90%;
+  padding-bottom: 3.8rem;
+  font-size: 2.4rem;
+  margin-left: 4rem;
+}
+
+.each-list {
+  padding: 0.8rem 0;
+}

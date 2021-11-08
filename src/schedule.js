@@ -7,7 +7,6 @@ const TODOS_LS = "toDos";
 let toDos = [];
 
 function deleteToDo(event) {
-  console.log(event.target);
   const btn = event.target;
   const button = btn.parentNode;
   const li = button.parentNode;

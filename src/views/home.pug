@@ -1,6 +1,8 @@
 extends layouts/base
 include mixins/video
-
+include mixins/photo
+include mixins/todo
+include mixins/did
 
 block content
     section.section-hero
@@ -16,53 +18,45 @@ block content
 
                 p.hero-description
                     | We&apos;ve been together for  
-                    .day-count  000
-                p.hero-description
+                    span.day-count  000
                     |  days
 
     section.section-video
-        .videos.container.grid.grid--3-cols
-            each potato in videoList
-                .video-cell
-                    +video(potato)
+        .container 
+            h1.heading-primary.home-title Videos
+            .videos.grid.grid--3-cols
+                each potato in videoList
+                    .video-cell
+                        +video(potato)
 
     section.section-gallery
-        .gallery.container
-            .gallery_img
-            .gallery_img
-            .gallery_img
-            .gallery_img
+        .container 
+            h1.heading-primary.home-title 
+                span Gallery
+                span.to-page 
+                    a(href="/gallery") more photos →
+            .gallery
+                each photo in photoList
+                    .gallery_img
+                        +photo(photo)
+
     section.section-wtd
         .wtd.grid.container.grid--3-cols
             .wd-lists
-                h1.wd-lists-title.heading-primary What we Did
+                h1.home-title.heading-primary What we Did
                 .wd-lists-li
                     ul
-                        li
-                            ion-icon(name='checkbox-outline')
-                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
-                        li
-                            ion-icon(name='checkbox-outline')
-                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
-                        li
-                            ion-icon(name='checkbox-outline')
-                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
+                        each b in scheduleListTodo
+                            li=b
             .wtd-lists
-                h1.wtd-lists-title.heading-primary What To Do
+                h1.home-title.heading-primary What To Do
                 .wtd-lists-li
                     ul
-                        li
-                            ion-icon(name='square-outline')
-                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
-                        li
-                            ion-icon(name='square-outline')
-                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
-                        li
-                            ion-icon(name='square-outline')
-                            span &#xB300;&#xD558; &#xBA39;&#xC73C;&#xB7EC; &#xAC00;&#xAE30;
+                        each c in scheduleListDid
+                            li=c
             .section-calendar
                 .calendar
-                    h1.calendar-month.heading-primary 11
+                    h1.calendar-month 11
                     .date
                         .day S
                         .day M
@@ -75,7 +69,7 @@ block content
                         .number 2
                         .number 3
                         .number 4
-                        .number.active 5
+                        .number 5
                         .number 6
                         .number 7
                         .number 8
@@ -101,6 +95,7 @@ block content
                         .number 28
                         .number 29
                         .number 30
+                        .number 31
         section.section-review
             .reviews.container
                 h1.review-title.heading-primary After watching ...

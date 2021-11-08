@@ -1,6 +1,6 @@
 mixin did(dolist)
-    div
-        h4=dolist.doto
+    div.each-list
+        span=dolist.doto
             a(href=`/schedule/${dolist.id}/cancel`)
                 ion-icon(name='close')
 

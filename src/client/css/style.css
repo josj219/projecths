@@ -5,8 +5,10 @@
 /*Menu*/
 @import "./menu/gallery.css";
 @import "./menu/review.css";
+@import "./menu/schedule.css";
 
 /*Partials*/
+@import "./partials/videoPlayer.css";
 @import "./partials/header.css";
 @import "./partials/footer.css";
 @import "./partials/form.css";
@@ -16,7 +18,7 @@ body {
 }
 
 .section-hero {
-  padding: 7.2rem 0;
+  padding: 4.2rem 0;
   background-color: var(--purple);
   height: 80vh;
 }
@@ -70,10 +72,17 @@ body {
   color: var(--yellow);
 }
 
+/*wtd*/
+
 .section-wtd {
   padding: 4.8rem 0 9.6rem 0;
   font-size: 1.8rem;
   width: 100%;
+}
+
+.wd-lists-li,
+.wtd-lists-li {
+  color: var(--lightgrey);
 }
 
 /*      section calendar     */
@@ -82,6 +91,13 @@ body {
   width: 30rem;
   height: auto;
   box-sizing: border-box;
+}
+
+.calendar-month {
+  color: var(--yellow);
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .calendar .date {
@@ -107,6 +123,10 @@ body {
 .calendar .date div.number:nth-child(7n + 1) {
   color: #ff685d;
   font-weight: 700;
+}
+
+.calendar .date div.number.removeDay {
+  display: none;
 }
 
 .wtd-lists,
@@ -148,29 +168,20 @@ body {
 
 .gallery {
   justify-self: center;
-  width: 80%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 40vh;
   justify-self: center;
+  column-gap: 0.3rem;
 }
 
-.gallery .gallery_img {
-  padding-right: 30px;
-  background-image: url("https://source.unsplash.com/random/");
-  background-position: center center;
-  background-size: cover;
+.gallery .gallery_img .photo-mixin {
+  height: 38rem;
 }
 
-.gallery .gallery_img:first-child {
-  background-image: url("https://source.unsplash.com/random/1");
-}
-
-.gallery .gallery_img:nth-child(2) {
-  background-image: url("https://source.unsplash.com/random/2");
-}
-.gallery .gallery_img:last-child {
-  background-image: url("https://source.unsplash.com/random/3");
+.gallery .gallery_img .photo-title {
+  position: relative;
 }
 
 /*      section video     */
@@ -179,24 +190,19 @@ body {
 }
 
 .video-cell {
-  background-color: var(--lightpurple);
-  height: 36rem;
+  background-color: var(--darkgrey);
+  height: 42rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
   transition: all 0.4s;
   display: grid;
-  grid-template-rows: 3fr 1fr;
-}
-
-.video-itself {
-  height: 100%;
 }
 
 .video-thumb {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 30rem;
+  object-fit: contain;
 }
 
 .videos-list {
@@ -208,9 +214,11 @@ body {
 }
 
 .video-message {
+  height: 10rem;
   padding: 1.6rem 3.6rem;
   display: flex;
   flex-direction: column;
+  background-color: var(--middlepurple);
 }
 
 .video-message .video-where {

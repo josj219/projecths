@@ -5,16 +5,13 @@ include ../mixins/photo
 block content
     .image-container
         .container
-            h1 PHOTO LIST
             .image-gallery
                 each photo in photoList
                     +photo(photo)
                 else
                     span.empty__message No Image found 
-            nav 
-                ul
-                    li
-                        a(href="gallery/upload") Upload Image
+    .button 
+        a(href="gallery/upload") Upload Image
 
 //-   .image-gallery
 //-                 a(href="img/gallery/img-1.jpg").img-1

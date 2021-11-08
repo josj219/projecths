@@ -1,5 +1,7 @@
 import User from "../models/User";
 import Video from "../models/Video";
+import Photo from "../models/Photo";
+import Schedule from "../models/Schedule";
 import bcrypt from "bcrypt";
 
 export const getJoin = (req, res) => res.render("join", { pageTitle: "Join" });
@@ -125,24 +127,53 @@ export const see = async (req, res) => {
 
 export const remove = (req, res) => res.send("Remove User");
 
-export const home = async (req, res) =>{
+export const home = async (req, res) => {
   const videoListall = await Video.find({}).sort({ when: "desc" });
-  const len = videoListall.length;
+  const photoListall = await Photo.find({});
+  const scheduleListall = await Schedule.find({});
+
+  //const vlen = videoListall.length;
+
+  const scheduleListTodo = [];
+  const scheduleListDid = [];
   const videoList = [];
-  
-  if (videoListall[0]){
-    videoList.push(videoListall[0])
-  }
-  if (videoListall[1]){
-    videoList.push(videoListall[1])
-  }
-  if (videoListall[0]){
-    videoList.push(videoListall[2])
-  }
-  
-  
-  return res.render("home", { pageTitle: "watch", videoList });
+  const photoList = [];
 
-}
+  for (var a in scheduleListall) {
+    if (scheduleListall[a].status == 1 && scheduleListTodo.length < 3) {
+      scheduleListTodo.push(scheduleListall[a].doto);
+    }
+    if (scheduleListall[a].status == 0 && scheduleListDid.length < 3) {
+      scheduleListDid.push(scheduleListall[a].doto);
+    }
+  }
+  if (videoListall[0]) {
+    videoList.push(videoListall[0]);
+  }
+  if (videoListall[1]) {
+    videoList.push(videoListall[1]);
+  }
+  if (videoListall[2]) {
+    videoList.push(videoListall[2]);
+  }
 
-
+  if (photoListall[0]) {
+    photoList.push(photoListall[0]);
+  }
+  if (photoListall[1]) {
+    photoList.push(photoListall[1]);
+  }
+  if (photoListall[2]) {
+    photoList.push(photoListall[2]);
+  }
+  if (photoListall[3]) {
+    photoList.push(photoListall[3]);
+  }
+  return res.render("home", {
+    pageTitle: "watch",
+    videoList,
+    photoList,
+    scheduleListTodo,
+    scheduleListDid,
+  });
+};

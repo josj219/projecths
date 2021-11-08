@@ -14,7 +14,9 @@
 /gallery/upload
 
 /reviews
-/reviews/watch
+/reviews/:id
+/reviews/:id/delete
+/reviews/upload
 
 /calendar
 /calendar/:yearandmonth

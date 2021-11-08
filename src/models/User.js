@@ -9,9 +9,8 @@ const userSchema = new mongoose.Schema({
   location: String,
   videos: [{ type: mongoose.Schema.Types.ObjectId, ref: "Video" }],
   photos: [{ type: mongoose.Schema.Types.ObjectId, ref: "Photo" }],
-
+  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
 });
-
 
 // userSchema.pre("save", async function () {
 //     this.password = await bcrypt.hash(this.password, 5);

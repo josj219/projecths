@@ -5,21 +5,25 @@ include ../mixins/did
 block content
     section.section-todo
         .container
-            .form-container
+            .form-container.list-form
+                .home-title.heading-primary NEW TO DO
                 form(method="POST", enctype="multipart/form-data")
                     input(type='text' placeholder='Write a to do' name="doto")
                     input(type="submit", value="New") 
-                .js-toDoList.list
-                    ul
+                
+            .todo-Lists
+                .js-toDoList
+                    h1 What To DO
+                    ul.dolists.lists
                         each schedule in scheduleList
                             if schedule.status == 0
                                 +todo(schedule)
-                .js-DidList.list 
-                    ul
+                .js-DidList
+                    h1 What We Did
+                    ul.didlists.lists
                         each schedule in scheduleList
                             if schedule.status == 1
                                 +did(schedule)
-                
 
 
     

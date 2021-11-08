@@ -1,46 +1,76 @@
 .form-container {
   margin-top: 9.6rem;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .form-container form {
-  width: 100%;
-  max-width: 320px;
-  margin-bottom: 50px;
+  margin: 0 auto;
 }
+
 .form-container form input:not([type="file"]),
 .form-container form .fileUpload {
   font-weight: 600;
   border-radius: 8px;
   font-size: 1.8rem;
   display: block;
-  width: 100%;
+  width: 32rem;
   padding-top: 10px;
   padding-bottom: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   text-align: center;
 }
 .form-container form input:not([type="file"]):not(:last-child),
 .form-container form .fileUpload:not(:last-child) {
   margin-bottom: 25px;
 }
-.form-container form textarea {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  margin-bottom: 25px;
-}
+
 .form-container form input[type="submit"] {
   background-color: var(--middlepurple);
   color: white;
-}
-.form-container a {
-  max-width: 320px;
-  width: 100%;
+  cursor: pointer;
+  padding: 15px 2px;
+  width: 32.4rem;
 }
 .form-container .fileUpload {
   background-color: var(--yellow);
   color: var(--purple);
   cursor: pointer;
-  padding: 20px 0;
+  padding: 1px 2px;
+}
+
+input {
+  padding: 0;
+}
+
+.__data {
+  margin-top: 4.8rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.__title {
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 1rem 0rem;
+  color: var(--yellow);
+}
+
+.__when,
+.__description {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 0.3;
+  padding: 1rem 0rem;
+  color: var(--lightyellow);
+}
+
+.__createdAt {
+  color: var(--lightgrey);
+}
+
+.__owner {
+  display: flex;
+  justify-content: end;
+  font-size: 1.8rem;
 }

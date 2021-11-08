@@ -9,7 +9,8 @@ export const videoHome = async (req, res) => {
 export const watch = async (req, res) => {
   const { id } = req.params;
   const video = await Video.findById(id).populate("owner");
-  // console.log(video);
+  console.log(video);
+
   if (!video) {
     return res.render("404", { pageTitle: "Video not found." });
   }
@@ -67,13 +68,12 @@ export const postUpload = async (req, res) => {
   const { path: fileUrl } = req.file;
   const { title, when, description, hashtags } = req.body;
 
-
   const uploadDate = new Date().toDateString();
   const whenDate = when;
-  console.log(typeof(when))
-  console.log(when)
-  console.log(when.substring(2,10));
-  
+  console.log(typeof when);
+  console.log(when);
+  console.log(when.substring(2, 10));
+
   try {
     const newVideo = await Video.create({
       title,
@@ -81,7 +81,7 @@ export const postUpload = async (req, res) => {
       fileUrl,
       when: whenDate,
       owner: _id,
-      createdAt : uploadDate,
+      createdAt: uploadDate,
       hashtags: Video.formatHashtags(hashtags),
       meta: {
         views: 0,

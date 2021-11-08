@@ -1,9 +1,9 @@
 mixin todo(dolist)
-    div
-        h4=dolist.doto
-            a(href=`/schedule/${dolist.id}/check`)
-                ion-icon(name='checkmark')
-            a(href=`/schedule/${dolist.id}/remove`)
-                ion-icon(name='trash')
+    div.each-list
+        a(href=`/schedule/${dolist.id}/check`)
+            ion-icon(name='checkmark')
+        span  #{dolist.doto} 
+        a(href=`/schedule/${dolist.id}/remove`)
+            ion-icon(name='trash')
 
         
