@@ -1,4 +1,5 @@
 .form-container {
+  margin-top: 9.6rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11,11 +12,15 @@
 }
 .form-container form input:not([type="file"]),
 .form-container form .fileUpload {
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1.8rem;
   display: block;
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-align: center;
 }
 .form-container form input:not([type="file"]):not(:last-child),
 .form-container form .fileUpload:not(:last-child) {
@@ -33,7 +38,9 @@
   max-width: 320px;
   width: 100%;
 }
-.form-container .fileUpload label {
-  font-weight: 300;
-  margin-right: 10px;
+.form-container .fileUpload {
+  background-color: var(--yellow);
+  color: var(--purple);
+  cursor: pointer;
+  padding: 20px 0;
 }

@@ -2,7 +2,7 @@ import Video from "../models/Video";
 import User from "../models/User";
 
 export const videoHome = async (req, res) => {
-  const videoList = await Video.find({}).sort({ createdAt: "desc" });
+  const videoList = await Video.find({}).sort({ when: "desc" });
   return res.render("videos/videoList", { pageTitle: "watch", videoList });
 };
 
@@ -65,15 +65,23 @@ export const postUpload = async (req, res) => {
     user: { _id },
   } = req.session;
   const { path: fileUrl } = req.file;
-  const { title, description, hashtags } = req.body;
+  const { title, when, description, hashtags } = req.body;
 
+
+  const uploadDate = new Date().toDateString();
+  const whenDate = when;
+  console.log(typeof(when))
+  console.log(when)
+  console.log(when.substring(2,10));
+  
   try {
     const newVideo = await Video.create({
       title,
       description,
       fileUrl,
+      when: whenDate,
       owner: _id,
-      createdAt: 123,
+      createdAt : uploadDate,
       hashtags: Video.formatHashtags(hashtags),
       meta: {
         views: 0,

@@ -13,27 +13,19 @@ block content
                     | rin & 
                     span.name_force SUNG
                     | jae
+
                 p.hero-description
                     | We&apos;ve been together for  
-                    span.day-count 000
-                    |   days
+                    .day-count  000
+                p.hero-description
+                    |  days
+
     section.section-video
         .videos.container.grid.grid--3-cols
-            .video-cell
-                img.video-img(src='img/video_01.png' alt='1st video')
-                ul.video-message
-                    p.where At ddd
-                    span.when 2days ago
-            .video-cell
-                img.video-img(src='img/video_01.png' alt='1st video')
-                ul.video-message
-                    p.where At ddd
-                    span.when 2days ago
-            .video-cell
-                img.video-img(src='img/video_01.png' alt='1st video')
-                ul.video-message
-                    p.where At ddd
-                    span.when 2days ago
+            each potato in videoList
+                .video-cell
+                    +video(potato)
+
     section.section-gallery
         .gallery.container
             .gallery_img
@@ -140,3 +132,6 @@ block content
                                     i.far.fa-star
                                 p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor doloribus nemo, quidem consequuntur ratione expedita voluptate
                                 p.review-name &mdash; Dongjin Jo
+
+block scripts
+    script(src="/static/js/date.js")

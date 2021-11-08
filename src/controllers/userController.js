@@ -125,4 +125,24 @@ export const see = async (req, res) => {
 
 export const remove = (req, res) => res.send("Remove User");
 
-export const home = (req, res) => res.render("home");
+export const home = async (req, res) =>{
+  const videoListall = await Video.find({}).sort({ when: "desc" });
+  const len = videoListall.length;
+  const videoList = [];
+  
+  if (videoListall[0]){
+    videoList.push(videoListall[0])
+  }
+  if (videoListall[1]){
+    videoList.push(videoListall[1])
+  }
+  if (videoListall[0]){
+    videoList.push(videoListall[2])
+  }
+  
+  
+  return res.render("home", { pageTitle: "watch", videoList });
+
+}
+
+
