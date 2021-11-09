@@ -3,6 +3,7 @@ include mixins/video
 include mixins/photo
 include mixins/todo
 include mixins/did
+include mixins/review
 
 block content
     section.section-hero
@@ -99,34 +100,6 @@ block content
         section.section-review
             .reviews.container
                 h1.review-title.heading-primary After watching ...
-                .review.grid
-                    .img-movie
-                        img(src='img/movie/oldmen.jfif' alt='')
-                    .review-movie
-                        figure.figure-review
-                            .review-img-wrapper
-                                img.reviewer-img(alt='h' src='img/h.png')
-                            blockquote.review-text
-                                .review-stars
-                                    i.fas.fa-star
-                                    i.fas.fa-star
-                                    i.fas.fa-star
-                                    i.fas.fa-star
-                                    i.fas.fa-star-half-alt
-                                | Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                p.review-name &mdash; Pyeongsik Bang
-                        figure.figure-review
-                            .review-img-wrapper
-                                img.reviewer-img(alt='h' src='img/h.png')
-                            blockquote.review-text
-                                .review-stars
-                                    i.fas.fa-star
-                                    i.fas.fa-star
-                                    i.fas.fa-star
-                                    i.fas.fa-star-half-alt
-                                    i.far.fa-star
-                                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor doloribus nemo, quidem consequuntur ratione expedita voluptate
-                                p.review-name &mdash; Dongjin Jo
-
+                    +review(reviewList)
 block scripts
     script(src="/static/js/date.js")

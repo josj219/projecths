@@ -2,6 +2,7 @@ import User from "../models/User";
 import Video from "../models/Video";
 import Photo from "../models/Photo";
 import Schedule from "../models/Schedule";
+import Review from "../models/Review";
 import bcrypt from "bcrypt";
 
 export const getJoin = (req, res) => res.render("join", { pageTitle: "Join" });
@@ -131,6 +132,7 @@ export const home = async (req, res) => {
   const videoListall = await Video.find({}).sort({ when: "desc" });
   const photoListall = await Photo.find({});
   const scheduleListall = await Schedule.find({});
+  const reviewListall = await Review.find({});
 
   //const vlen = videoListall.length;
 
@@ -138,6 +140,7 @@ export const home = async (req, res) => {
   const scheduleListDid = [];
   const videoList = [];
   const photoList = [];
+  const reviewList = reviewListall[2];
 
   for (var a in scheduleListall) {
     if (scheduleListall[a].status == 1 && scheduleListTodo.length < 3) {
@@ -175,5 +178,6 @@ export const home = async (req, res) => {
     photoList,
     scheduleListTodo,
     scheduleListDid,
+    reviewList,
   });
 };

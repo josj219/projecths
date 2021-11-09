@@ -1,33 +1,33 @@
 mixin review(review)
+    .review-title 
+        #{review.movieName}
     .review-mixin
         .review-poster
             a(href=`/gallery/${review.id}`)
                 img(src="/"+review.fileUrl)
-        .review-result
-            .review-movieName #{review.movieName}No country
-            .review-score
-                figure.figure-review
-                    .review-img-wrapper
-                        img.reviewer-img(alt='h' src='img/h.png')
-                    blockquote.review-text
-                        .review-stars
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.fas.fa-star-half-alt
-                        p #{review.bang_comment}
-                        p.review-name &mdash; Pyeongsik Bang
-                figure.figure-review
-                    .review-img-wrapper
-                        img.reviewer-img(alt='h' src='img/h.png')
-                    blockquote.review-text
-                        .review-stars
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.fas.fa-star-half-alt
-                        p #{review.jo_comment}
-                        p.review-name &mdash; Pyeongsik Bang
-                              
+        .review-movie
+            figure.figure-review
+                .review-img-wrapper
+                    img.reviewer-img(alt='h' src='img/h.png')
+                blockquote.review-text
+                    .review-stars
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star-half-alt
+                    p #{review.bang_comment}
+                    p.review-name &mdash; Pyeongsik Bang
+            figure.figure-review
+                .review-img-wrapper
+                    img.reviewer-img(alt='h' src='img/h.png')
+                blockquote.review-text
+                    .review-stars
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star-half-alt
+                    p #{review.jo_comment}
+                    p.review-name &mdash; Pyeongsik Bang
+
