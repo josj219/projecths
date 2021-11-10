@@ -1,15 +1,26 @@
 .review-mixin {
-  width: 60rem;
+  width: 120rem;
+  height: 50rem;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 1rem;
+  column-gap: 6.4rem;
+  grid-template-columns: 1.5fr 3fr;
+  overflow: hidden;
 }
 
-.review-poster {
-  object-fit: cover;
+.review-mixin a {
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.review-mixin a img {
+  align-self: center;
+  width: 100%;
+}
+
+.review-poster img {
+  object-fit: contain;
+  width: 100%;
 }
 
 .review-result {
@@ -30,13 +41,13 @@
 }
 
 .review-movie {
+  height: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  gap: 1.2rem;
-  row-gap: 4.4rem;
 }
 
 .figure-review {
+  align-self: center;
   display: grid;
   grid-template-columns: 1fr 7fr;
   gap: 2.4rem;
@@ -44,6 +55,8 @@
   background-color: var(--lightyellow);
   padding: 1.2rem 2.4rem;
   border-radius: 11px;
+  width: 90%;
+  height: 10rem;
 }
 
 .review-img-wrapper {

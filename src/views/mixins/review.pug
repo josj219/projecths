@@ -1,10 +1,7 @@
 mixin review(review)
-    .review-title 
-        #{review.movieName}
     .review-mixin
-        .review-poster
-            a(href=`/gallery/${review.id}`)
-                img(src="/"+review.fileUrl)
+        a(href=`/gallery/${review.id}`)
+            img(src="/"+review.fileUrl)
         .review-movie
             figure.figure-review
                 .review-img-wrapper
