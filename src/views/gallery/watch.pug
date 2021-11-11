@@ -2,15 +2,21 @@ extends ../layouts/base
 
 block content
     .container
+        .photo-watch-title 
+            a(href="/gallery").backtogallery 
+                i.fas.fa-chevron-left
+            h1.__title=photo.title
+            .photo__owner Uploaded by 
+                a.photo__owner__name(href=`/users/${photo.owner._id}`)=photo.owner.name
         .photo-watch
             img(src="/" + photo.fileUrl).photo-img
-            h1.__title=photo.title
             div
                 p.__description=photo.description
-            small.__owner Uploaded by &nbsp;
-                a(href=`/users/${photo.owner._id}`)=photo.owner.name
-            .button
-                a(href="/gallery") back to gallery
+            //- .button
+            //-     a(href="/gallery") back to gallery
+
+
+
     //- if String(photo.owner._id) === String(loggedInUser._id)
     //-     a(href=`${photo.id}/edit`) Edit Photo &rarr;
     //-     br
