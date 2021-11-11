@@ -4,7 +4,7 @@
 }
 
 .grid--footer {
-  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
 }
 
 .logo-col {
@@ -19,8 +19,9 @@
 
 .social-links {
   list-style: none;
+  width: 100%;
   display: flex;
-  gap: 2.4rem;
+  justify-content: space-around;
 }
 
 .social-icon {
@@ -33,6 +34,7 @@
   line-height: 1.6;
   color: #767676;
   margin-top: auto;
+  text-align: center;
 }
 
 .footer-heading {

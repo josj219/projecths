@@ -1,7 +1,7 @@
 mixin review-page(review)
      .review-page-mixin
         .review-page-poster
-            a(href=`/gallery/${review.id}`)
+            a(href=`/reviews/${review.id}`)
                 img(src="/"+review.fileUrl).poster-image
         .review-page-result
             .review-movieName #{review.movieName}

@@ -1,0 +1,8 @@
+extends ../layouts/base
+include ../mixins/review
+
+
+block content
+    .reviews.container
+            h1.review-title.heading-primary=review.movieName
+            +review(review)
