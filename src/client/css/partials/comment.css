@@ -13,18 +13,19 @@
 .video__comment-form textarea {
   /*border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;*/
-  border-radius: 1.5rem;
-
+  border-radius: 9999px;
+  border: none;
   height: 5rem;
-  background-color: var(--lightpurple);
-  color: va;
+  background-color: var(--2lightpurple);
 }
 .video__comment-form button {
-  border-radius: 1.5rem;
-  background-color: var(--yellow);
-  color: var(--purple);
+  border-radius: 9999px;
+  background-color: var(--middlepurple);
+  color: var(--yellow);
   font-size: 1.3rem;
   font-weight: 700;
+  cursor: pointer;
+  border: none;
 }
 
 .video__comment-form textarea::placeholder {
@@ -63,11 +64,15 @@
 .fa-comment {
   padding: 1rem 1.3rem;
   background-color: var(--yellow);
-  border-radius: 1.5rem;
+  border-radius: 9999px;
   font-size: 1.6rem;
   font-weight: 800;
 }
 
 .fa-comment i {
   color: var(--yellow);
+}
+
+.deleteCommentBtn {
+  cursor: pointer;
 }

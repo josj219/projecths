@@ -3,8 +3,13 @@
   display: flex;
   flex-direction: column;
 }
-.video__data .video__title {
+.video__data {
   font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.video__title {
+  font-size: 4rem;
   margin-bottom: 5px;
 }
 .video__data .video__createdAt {
@@ -18,7 +23,55 @@
   color: cornflowerblue;
   text-decoration: underline;
 }
-.edit_video,
-.delete_video {
+
+.video__owner {
+  justify-content: end;
+}
+
+.video__data {
+  margin-top: 4.8rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.video__title {
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit_video:link,
+.delete_video:visited {
+  text-decoration: none;
+  text-align: end;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--lightgrey);
+  transition: all 0.3s;
+}
+.edit_video:hover,
+.delete_video:hover {
+  font-weight: 500;
+  color: var(--yello);
+  transition: all 0.3s;
+}
+
+.edit_delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.video__when {
   font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 0.3;
+  padding: 1rem 0rem;
+  text-align: center;
+  color: var(--lightyellow);
 }

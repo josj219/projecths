@@ -20,15 +20,19 @@ block content
                 div
                     span#fullScreen
                         i.fas.fa-expand
-        div.__data
-            p.__title=video.title 
-            p.__when=video.when
-            small.video__owner 
-                if String(video.owner._id) === String(loggedInUser._id)
-                    .edit_video
-                        a(href=`${video.id}/edit`)  Edit Video  /  
-                        a(href=`${video.id}/delete`) Delete Video
-                .__createdAt Uploaded at &nbsp; #{video.createdAt}
+        div.video__data
+            .video__title #{video.title}
+                p.video__when=video.when
+
+            if String(video.owner._id) === String(loggedInUser._id)
+                div.edit_delete
+                    span.edit_video
+                        a(href=`${video.id}/edit`)  [Edit Video]
+                    span.delete_video
+                        a(href=`${video.id}/delete`) [Delete Video]
+
+                //- small.video__owner 
+                //-     .__createdAt Uploaded at &nbsp; #{video.createdAt}
         if loggedIn
             div.video__add-comments
                 form.video__comment-form#commentForm
@@ -40,10 +44,14 @@ block content
                     li.video__comment(data-id=comment.id)
                         i.fas.fa-comment  #{comment.owner_name}
                         span  #{comment.text}
-                        span ❌
+                        if String(comment.owner) === String(loggedInUser._id)
+                            span.deleteCommentBtn ❌
+                        else  
+                            span 
+
 
 
 block scripts
     script(src="/static/js/videoPlayer.js") 
-    //- if loggedIn
-    script(src="/static/js/commentSection.js")  
+    if loggedIn
+        script(src="/static/js/commentSection.js")  
