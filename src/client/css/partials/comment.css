@@ -1,0 +1,73 @@
+.video__add-comments {
+  margin-top: 3.6rem;
+}
+
+.video__comment-form {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video__comment-form textarea {
+  /*border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;*/
+  border-radius: 1.5rem;
+
+  height: 5rem;
+  background-color: var(--lightpurple);
+  color: va;
+}
+.video__comment-form button {
+  border-radius: 1.5rem;
+  background-color: var(--yellow);
+  color: var(--purple);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.video__comment-form textarea::placeholder {
+  color: blue;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.video__comments {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.video__comments .video__comment {
+  padding: 10px;
+  border-radius: 9999px;
+  background-color: var(--lightyellow);
+  color: black;
+  margin-bottom: 10px;
+  height: 4rem;
+}
+
+.video__comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.fa-comment {
+  padding: 1rem 1.3rem;
+  background-color: var(--yellow);
+  border-radius: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.fa-comment i {
+  color: var(--yellow);
+}

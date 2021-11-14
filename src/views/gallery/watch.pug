@@ -5,13 +5,13 @@ block content
         .photo-watch-title 
             a(href="/gallery").backtogallery 
                 i.fas.fa-chevron-left
-            h1.__title=photo.title
-            .photo__owner Uploaded by 
+            h1.photo__title=photo.title
+            .photo__owner Uploaded by &nbsp;
                 a.photo__owner__name(href=`/users/${photo.owner._id}`)=photo.owner.name
         .photo-watch
             img(src="/" + photo.fileUrl).photo-img
-            div
-                p.__description=photo.description
+            .photo_description_section
+                p.photo__description=photo.description
             //- .button
             //-     a(href="/gallery") back to gallery
 

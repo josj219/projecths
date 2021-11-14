@@ -6,12 +6,14 @@
 @import "./menu/gallery.css";
 @import "./menu/review.css";
 @import "./menu/schedule.css";
+@import "./menu/videoWatch.css";
 
 /*Partials*/
 @import "./partials/videoPlayer.css";
 @import "./partials/header.css";
 @import "./partials/footer.css";
 @import "./partials/form.css";
+@import "./partials/comment.css";
 
 body {
   background-color: var(--purple);

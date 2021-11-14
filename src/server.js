@@ -9,6 +9,7 @@ import userRouter from "./routers/userRouter";
 import galleryRouter from "./routers/galleryRouter";
 import scheduleRouter from "./routers/scheduleRouter";
 import reviewRouter from "./routers/reviewRouter";
+import apiRouter from "./routers/apiRouter";
 
 const app = express();
 const logger = morgan("dev");
@@ -17,6 +18,8 @@ app.set("view engine", "pug");
 app.set("views", process.cwd() + "/src/views");
 app.use(logger);
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.use(
   session({
     secret: process.env.COOKIE_SECRET,
@@ -36,4 +39,5 @@ app.use("/videos", videoRouter);
 app.use("/gallery", galleryRouter);
 app.use("/reviews", reviewRouter);
 app.use("/schedule", scheduleRouter);
+app.use("/api", apiRouter);
 export default app;

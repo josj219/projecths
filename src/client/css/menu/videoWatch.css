@@ -18,18 +18,7 @@
   color: cornflowerblue;
   text-decoration: underline;
 }
-.video__comments {
-  display: flex;
-  flex-direction: column;
-  max-width: 320px;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-.video__comments .video__comment {
-  padding: 10px;
-  border-radius: 9999px;
-  background-color: white;
-  color: black;
-  margin-bottom: 10px;
+.edit_video,
+.delete_video {
+  font-size: 2.4rem;
 }
