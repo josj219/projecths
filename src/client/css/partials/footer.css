@@ -4,7 +4,7 @@
 }
 
 .grid--footer {
-  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
 }
 
 .logo-col {

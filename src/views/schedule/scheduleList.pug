@@ -6,10 +6,10 @@ block content
     section.section-todo
         .container
             .form-container.list-form
-                .home-title.heading-primary NEW TO DO
+                .home-title.heading-primary#NEWTODO NEW TO DO
                 form(method="POST", enctype="multipart/form-data")
                     input(type='text' placeholder='Write a to do' name="doto")
-                    input(type="submit", value="New") 
+                    input(type="submit", value="New")#schedule_new
                 
             .todo-Lists
                 .js-toDoList

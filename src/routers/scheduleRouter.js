@@ -6,16 +6,26 @@ import {
   cancel,
   remove,
 } from "../controllers/scheduleController";
-import { publicOnlyMiddleware, scheduleUpload } from "../middlewares";
+import { protectorMiddleware, scheduleUpload } from "../middlewares";
 
 const scheduleRouter = express.Router();
 
 scheduleRouter
   .route("/")
+  .all(protectorMiddleware)
   .get(scheduleHome)
   .post(scheduleUpload.single("schedule"), write);
-scheduleRouter.get("/:id([0-9a-f]{24})/check", check);
-scheduleRouter.get("/:id([0-9a-f]{24})/cancel", cancel);
-scheduleRouter.get("/:id([0-9a-f]{24})/remove", remove);
+scheduleRouter
+  .route("/:id([0-9a-f]{24})/check")
+  .all(protectorMiddleware)
+  .get(check);
+scheduleRouter
+  .route("/:id([0-9a-f]{24})/cancel")
+  .all(protectorMiddleware)
+  .get(cancel);
+scheduleRouter
+  .route("/:id([0-9a-f]{24})/remove")
+  .all(protectorMiddleware)
+  .get(remove);
 
 export default scheduleRouter;

@@ -84,7 +84,8 @@ body {
 
 .wd-lists-li,
 .wtd-lists-li {
-  color: var(--lightgrey);
+  color: var(--yellow);
+  font-family: "Gaegu", cursive;
 }
 
 /*      section calendar     */
@@ -320,7 +321,7 @@ body {
 }
 
 .grid--footer {
-  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
 }
 
 .logo-col {

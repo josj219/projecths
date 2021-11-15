@@ -42,64 +42,73 @@ block content
                         +photo(photo)
 
     section.section-wtd
-        .wtd.grid.container.grid--3-cols
-            .wd-lists
-                h1.home-title.heading-primary What we Did
-                .wd-lists-li
-                    ul
-                        each b in scheduleListTodo
-                            li=b
-            .wtd-lists
-                h1.home-title.heading-primary What To Do
-                .wtd-lists-li
-                    ul
-                        each c in scheduleListDid
-                            li=c
-            .section-calendar
-                .calendar
-                    h1.calendar-month 11
-                    .date
-                        .day S
-                        .day M
-                        .day T
-                        .day W
-                        .day T
-                        .day F
-                        .day S
-                        .number 1
-                        .number 2
-                        .number 3
-                        .number 4
-                        .number 5
-                        .number 6
-                        .number 7
-                        .number 8
-                        .number 9
-                        .number 10
-                        .number 11
-                        .number 12
-                        .number 13
-                        .number 14
-                        .number 15
-                        .number 16
-                        .number 17
-                        .number 18
-                        .number 19
-                        .number 20
-                        .number 21
-                        .number 22
-                        .number 23
-                        .number 24
-                        .number 25
-                        .number 26
-                        .number 27
-                        .number 28
-                        .number 29
-                        .number 30
-                        .number 31
+        .container 
+            h1.heading-primary.home-title 
+                span Schedule
+                span.to-page 
+                    a(href="/schedule") about schedule →
+            .wtd.grid.grid--3-cols
+                .wd-lists
+                    h1.heading-secondary What we Did
+                    .wd-lists-li
+                        ul
+                            each b in scheduleListTodo
+                                li=b
+                .wtd-lists
+                    h1.heading-secondary What To Do
+                    .wtd-lists-li
+                        ul
+                            each c in scheduleListDid
+                                li=c
+                .section-calendar
+                    .calendar
+                        h1.calendar-month 11
+                        .date
+                            .day S
+                            .day M
+                            .day T
+                            .day W
+                            .day T
+                            .day F
+                            .day S
+                            .number
+                            .number 1
+                            .number 2
+                            .number 3
+                            .number 4
+                            .number 5
+                            .number 6
+                            .number 7
+                            .number 8
+                            .number 9
+                            .number 10
+                            .number 11
+                            .number 12
+                            .number 13
+                            .number 14
+                            .number 15
+                            .number 16
+                            .number 17
+                            .number 18
+                            .number 19
+                            .number 20
+                            .number 21
+                            .number 22
+                            .number 23
+                            .number 24
+                            .number 25
+                            .number 26
+                            .number 27
+                            .number 28
+                            .number 29
+                            .number 30
+                            .number 31
         section.section-review
             .reviews.container
-                h1.review-title.heading-primary After watching ...
+                h1.heading-primary.home-title 
+                    span Movie Reviews
+                    span.to-page 
+                        a(href="/reviews") more reviews →
                 +review(reviewList)
 block scripts
     script(src="/static/js/date.js")

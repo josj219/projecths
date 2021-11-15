@@ -14,7 +14,9 @@ function today() {
   var now = new Date();
   var date = now.getDate(); // 일
 
-  dateNumber[date - 1].classList.add("active");
+  dateNumber[date].classList.add("active");
+  //여기에 일요일부터 1일이 시작하면 date-1 이 기본임
+  //거기에 월요일부터 시작하면+1, 화요일부터 시작하면 +2 해서 그 결과값을 [] 안에 넣으면 된다.
 }
 
 function calendar() {

@@ -21,11 +21,11 @@ export const postUploadReview = async (req, res) => {
     jo_score,
     jo_comment,
   } = req.body;
-  
 
   try {
-    const avg_score = (parseInt(bang_score) + parseInt(jo_score))/2;
-    console.log(avg_score);
+    const avg = (parseFloat(bang_score) + parseFloat(jo_score)) / 2;
+    const avg_score = Math.round(avg * 100) / 100;
+
     const newReview = await Review.create({
       movieName,
       fileUrl,
@@ -34,7 +34,7 @@ export const postUploadReview = async (req, res) => {
       bang_comment,
       jo_score,
       jo_comment,
-      avg_score
+      avg_score,
     });
     console.log(newReview);
     return res.redirect("/reviews");

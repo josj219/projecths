@@ -9,9 +9,19 @@
   margin: 0 auto;
 }
 
-.form-container form input:not([type="file"]),
 .form-container form .fileUpload {
   font-weight: 600;
+  border-radius: 8px;
+  font-size: 2.4rem;
+  width: 32rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  display: block;
+}
+
+.form-container form input:not([type="file"]) {
+  font-weight: 500;
   border-radius: 8px;
   font-size: 1.8rem;
   display: block;
@@ -36,7 +46,7 @@
   background-color: var(--yellow);
   color: var(--purple);
   cursor: pointer;
-  padding: 1px 2px;
+  padding: 3px 2px;
 }
 
 input {

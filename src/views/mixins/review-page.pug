@@ -1,10 +1,10 @@
 mixin review-page(review)
-     .review-page-mixin
+    a(href=`/reviews/${review.id}`)
+      .review-page-mixin
         .review-page-poster
-            a(href=`/reviews/${review.id}`)
-                img(src="/"+review.fileUrl).poster-image
+          img(src="/"+review.fileUrl).poster-image
         .review-page-result
-            .review-movieName #{review.movieName}
-            .review-page-avgscore 
-                ion-icon(name="star").review-page-star
-                .score-avg #{review.avg_score}
+          .review-movieName #{review.movieName}
+          .review-page-avgscore 
+              ion-icon(name="star").review-page-star
+              .score-avg #{review.avg_score}
