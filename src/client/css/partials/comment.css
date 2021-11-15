@@ -10,13 +10,15 @@
   margin: 0 auto;
 }
 
-.video__comment-form textarea {
+.video__comment-form input {
   /*border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;*/
   border-radius: 9999px;
   border: none;
   height: 5rem;
   background-color: var(--2lightpurple);
+  text-align: center;
+  vertical-align: center;
 }
 .video__comment-form button {
   border-radius: 9999px;
@@ -28,7 +30,7 @@
   border: none;
 }
 
-.video__comment-form textarea::placeholder {
+.video__comment-form input::placeholder {
   color: blue;
   font-size: 1.6rem;
   font-weight: bold;

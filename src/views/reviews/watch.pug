@@ -6,3 +6,6 @@ block content
     .reviews.container
             h1.review-title.heading-primary=review.movieName
             +review(review)
+
+block scripts
+    script(src="/static/js/reviewRating.js") 

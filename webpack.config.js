@@ -9,6 +9,7 @@ module.exports = {
     videoPlayer: "./src/client/js/videoPlayer.js",
     date: BASE_JS + "date.js",
     commentSection: BASE_JS + "commentSection.js",
+    reviewRating: BASE_JS + "reviewRating.js",
   },
   mode: "development",
   watch: true,

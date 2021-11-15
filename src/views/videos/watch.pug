@@ -36,7 +36,7 @@ block content
         if loggedIn
             div.video__add-comments
                 form.video__comment-form#commentForm
-                    textarea(cols="30", rows="10", placeholder="    Commment in 25words..." , maxlength="25")
+                    input(type="text", placeholder="    Commment in 25words..." , maxlength="25")
                     button Add Comment
         div.video__comments
             ul

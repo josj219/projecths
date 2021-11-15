@@ -7,24 +7,26 @@ mixin review(review)
                 .review-img-wrapper
                     img.reviewer-img(alt='h' src='/img/h.png')
                 blockquote.review-text
-                    .review-stars
-                        i.fas.fa-star
-                        i.fas.fa-star
-                        i.fas.fa-star
-                        i.fas.fa-star
-                        i.fas.fa-star-half-alt
+                    .review-stars#bang_star
+                        i.far.fa-star
+                        i.far.fa-star
+                        i.far.fa-star
+                        i.far.fa-star
+                        i.far.fa-star
+                        span#bang_score   #{review.bang_score}
                     p #{review.bang_comment}
                     p.review-name &mdash; Pyeongsik Bang
             figure.figure-review
                 .review-img-wrapper
-                    img.reviewer-img(alt='h' src="/img/h.png")
+                    img.reviewer-img(alt='j' src="/img/j.jpg")
                 blockquote.review-text
-                    .review-stars
-                        i.fas.fa-star
-                        i.fas.fa-star
-                        i.fas.fa-star
-                        i.fas.fa-star
-                        i.fas.fa-star-half-alt
+                    .review-stars#jo_star
+                        i.far.fa-star
+                        i.far.fa-star
+                        i.far.fa-star
+                        i.far.fa-star
+                        i.far.fa-star
+                        span#jo_score    #{review.jo_score}
                     p #{review.jo_comment}
-                    p.review-name &mdash; Pyeongsik Bang
+                    p.review-name &mdash; Dongjin Jo
 
