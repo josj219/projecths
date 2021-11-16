@@ -135,7 +135,7 @@ export const seehome = (req, res) => res.render("home", { pageTitle: "HOME" });
 
 export const home = async (req, res) => {
   //const videoListall = await Video.find({}).sort({ when: "desc" });
-  //const photoListall = await Photo.find({});
+  const photoListall = await Photo.find({});
   //const scheduleListall = await Schedule.find({});
   //const reviewListall = await Review.find({});
 
@@ -165,6 +165,7 @@ export const home = async (req, res) => {
   if (videoListall[2]) {
     videoList.push(videoListall[2]);
   }
+  */
 
   if (photoListall[0]) {
     photoList.push(photoListall[0]);
@@ -178,7 +179,6 @@ export const home = async (req, res) => {
   if (photoListall[3]) {
     photoList.push(photoListall[3]);
   }
-*/
   return res.render("home", {
     pageTitle: "HOME",
     videoList,
