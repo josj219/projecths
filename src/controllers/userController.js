@@ -157,6 +157,10 @@ export const home = async (req, res) => {
     }
   }
 
+  if (reviewListall[0]) {
+    reviewList.push(reviewListall[0]);
+  }
+
   if (videoListall[0]) {
     videoList.push(videoListall[0]);
   }
