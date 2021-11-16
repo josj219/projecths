@@ -131,6 +131,8 @@ export const see = async (req, res) => {
 
 export const remove = (req, res) => res.send("Remove User");
 
+export const home = (req, res) => res.send("HOME");
+
 export const seehome = async (req, res) => {
   const videoListall = await Video.find({}).sort({ when: "desc" });
   const photoListall = await Photo.find({});
@@ -175,6 +177,7 @@ export const seehome = async (req, res) => {
   if (photoListall[3]) {
     photoList.push(photoListall[3]);
   }
+
   return res.render("home", {
     pageTitle: "HOME",
     videoList,
