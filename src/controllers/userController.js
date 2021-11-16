@@ -129,7 +129,7 @@ export const see = async (req, res) => {
 
 export const remove = (req, res) => res.send("Remove User");
 
-export const home = async (req, res) => {
+export const seehome = async (req, res) => {
   const videoListall = await Video.find({}).sort({ when: "desc" });
   const photoListall = await Photo.find({});
   const scheduleListall = await Schedule.find({});
