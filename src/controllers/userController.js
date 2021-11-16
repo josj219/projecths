@@ -156,6 +156,8 @@ export const home = async (req, res) => {
       scheduleListDid.push(scheduleListall[a].doto);
     }
   }
+  */
+
   if (videoListall[0]) {
     videoList.push(videoListall[0]);
   }
@@ -165,7 +167,6 @@ export const home = async (req, res) => {
   if (videoListall[2]) {
     videoList.push(videoListall[2]);
   }
-  */
 
   if (photoListall[0]) {
     photoList.push(photoListall[0]);
