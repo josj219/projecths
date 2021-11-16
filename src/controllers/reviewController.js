@@ -12,7 +12,7 @@ export const getUploadReview = (req, res) => {
 };
 
 export const postUploadReview = async (req, res) => {
-  const { path: fileUrl } = req.file;
+  const { location: fileUrl } = req.file;
   const {
     movieName,
     hashtags,

@@ -8,24 +8,20 @@ import {
   postChangePassword,
 } from "../controllers/userController";
 import {
-    protectorMiddleware,
-    publicOnlyMiddleware,
-    avatarUpload,
-  } from "../middlewares";
-  
+  protectorMiddleware,
+  publicOnlyMiddleware,
+  avatarUpload,
+} from "../middlewares";
+
 const userRouter = express.Router();
 
 userRouter.get("/logout", protectorMiddleware, logout);
+
 userRouter
-.route("/edit")
-.all(protectorMiddleware)
-.get(getEdit)
-.post(avatarUpload.single("avatar"), postEdit);
-userRouter
-.route("/change-password")
-.all(protectorMiddleware)
-.get(getChangePassword)
-.post(postChangePassword);
+  .route("/change-password")
+  .all(protectorMiddleware)
+  .get(getChangePassword)
+  .post(postChangePassword);
 
 userRouter.get("/:id", see);
 

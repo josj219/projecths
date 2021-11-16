@@ -1,5 +1,5 @@
 mixin photo(photo)
     .photo-mixin
         a(href=`/gallery/${photo.id}`)
-            img(src="/"+photo.fileUrl).photo-thumb
+            img(src=photo.fileUrl).photo-thumb
             p.photo-title #{photo.title}

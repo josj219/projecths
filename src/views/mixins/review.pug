@@ -1,7 +1,7 @@
 mixin review(review)
     .review-mixin
         a(href=`/gallery/${review.id}`)
-            img(src="/"+review.fileUrl)
+            img(src=review.fileUrl)
         .review-movie
             figure.figure-review
                 .review-img-wrapper

@@ -9,7 +9,7 @@ block content
             .photo__owner Uploaded by &nbsp;
                 a.photo__owner__name(href=`/users/${photo.owner._id}`)=photo.owner.name
         .photo-watch
-            img(src="/" + photo.fileUrl).photo-img
+            img(src=photo.fileUrl).photo-img
             .photo_description_section
                 p.photo__description=photo.description
    

@@ -65,7 +65,7 @@ export const postUpload = async (req, res) => {
   const {
     user: { _id },
   } = req.session;
-  const { path: fileUrl } = req.file;
+  const { location: fileUrl } = req.file;
   const { title, when, description, hashtags } = req.body;
 
   const uploadDate = new Date().toDateString();
