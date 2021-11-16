@@ -145,8 +145,13 @@ export const home = async (req, res) => {
   const scheduleListDid = [];
   const videoList = [];
   const photoList = [];
-  const reviewList = reviewListall[1];
-  //const reviewList = [];
+
+  if (reviewListall) {
+    const reviewList = reviewListall[1];
+  } else {
+    const reviewList = [];
+  }
+
   /*
   for (var a in scheduleListall) {
     if (scheduleListall[a].status == 1 && scheduleListTodo.length < 3) {
