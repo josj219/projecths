@@ -136,7 +136,7 @@ export const seehome = (req, res) => res.render("home", { pageTitle: "HOME" });
 export const home = async (req, res) => {
   const videoListall = await Video.find({}).sort({ when: "desc" });
   const photoListall = await Photo.find({});
-  //const scheduleListall = await Schedule.find({});
+  const scheduleListall = await Schedule.find({});
   const reviewListall = await Review.find({});
 
   //const vlen = videoListall.length;
@@ -147,7 +147,7 @@ export const home = async (req, res) => {
   const photoList = [];
   //  const reviewList = reviewListall[1];
   const reviewList = [];
-  /*
+
   for (var a in scheduleListall) {
     if (scheduleListall[a].status == 1 && scheduleListTodo.length < 3) {
       scheduleListTodo.push(scheduleListall[a].doto);
@@ -156,7 +156,6 @@ export const home = async (req, res) => {
       scheduleListDid.push(scheduleListall[a].doto);
     }
   }
-  */
 
   if (videoListall[0]) {
     videoList.push(videoListall[0]);
