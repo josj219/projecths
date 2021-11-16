@@ -134,7 +134,7 @@ export const remove = (req, res) => res.send("Remove User");
 export const seehome = (req, res) => res.render("home", { pageTitle: "HOME" });
 
 export const home = async (req, res) => {
-  //const videoListall = await Video.find({}).sort({ when: "desc" });
+  const videoListall = await Video.find({}).sort({ when: "desc" });
   const photoListall = await Photo.find({});
   //const scheduleListall = await Schedule.find({});
   //const reviewListall = await Review.find({});
