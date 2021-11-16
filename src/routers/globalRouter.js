@@ -5,7 +5,7 @@ import { protectorMiddleware } from "../middlewares";
 
 const globalRouter = express.Router();
 
-globalRouter.route("/").get(seehome);
+globalRouter.route("/").all(protectorMiddleware).get(seehome);
 globalRouter.route("/login").get(getLogin).post(postLogin);
 //globalRouter.get("/search", search);
 

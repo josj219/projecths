@@ -112,6 +112,7 @@ export const postChangePassword = async (req, res) => {
   return res.redirect("/users/logout");
 };
 
+/*
 export const see = async (req, res) => {
   console.log("see users");
   const { id } = req.params;
@@ -126,6 +127,7 @@ export const see = async (req, res) => {
     videos,
   });
 };
+*/
 
 export const remove = (req, res) => res.send("Remove User");
 
