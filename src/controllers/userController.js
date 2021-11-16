@@ -137,7 +137,7 @@ export const home = async (req, res) => {
   const videoListall = await Video.find({}).sort({ when: "desc" });
   const photoListall = await Photo.find({});
   //const scheduleListall = await Schedule.find({});
-  //const reviewListall = await Review.find({});
+  const reviewListall = await Review.find({});
 
   //const vlen = videoListall.length;
 
@@ -145,7 +145,7 @@ export const home = async (req, res) => {
   const scheduleListDid = [];
   const videoList = [];
   const photoList = [];
-  //  const reviewList = reviewListall[1];
+  const reviewList = reviewListall[1];
   const reviewList = [];
   /*
   for (var a in scheduleListall) {
