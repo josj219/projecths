@@ -31,7 +31,7 @@
   }
 
   header {
-    padding: 0 0.5rem;
+    padding: 0 1.5rem;
   }
 
   .btn-mobile-nav {
@@ -88,5 +88,13 @@
   .main-nav-link:link,
   .main-nav-link:visited {
     font-size: 3rem;
+  }
+
+  .btn-mobile-nav i {
+    width: 10rem;
+  }
+
+  .footer-logo {
+    display: none;
   }
 }
