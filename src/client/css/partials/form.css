@@ -20,14 +20,16 @@
   display: block;
 }
 
+.form-container form input {
+  width: 32rem;
+}
+
 .form-container form input:not([type="file"]) {
   font-weight: 500;
   border-radius: 8px;
   font-size: 1.8rem;
   display: block;
-  width: 32rem;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 1rem 0;
   text-align: center;
 }
 .form-container form input:not([type="file"]):not(:last-child),
@@ -39,8 +41,8 @@
   background-color: var(--middlepurple);
   color: white;
   cursor: pointer;
-  padding: 15px 2px;
-  width: 32.4rem;
+  padding: 1.5rem 2rem;
+  width: 100%;
 }
 .form-container .fileUpload {
   background-color: var(--yellow);
