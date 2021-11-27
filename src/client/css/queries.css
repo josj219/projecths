@@ -206,9 +206,9 @@
     padding: 1.2rem 1rem;
   }
 
-  .fa,
-  .far,
-  .fas {
+  .review-stars .fa,
+  .review-stars .far,
+  .review-stars .fas {
     font-size: 1.5rem;
   }
   .review-stars {
@@ -217,5 +217,12 @@
   }
   .review-name {
     align-items: end;
+  }
+  .photo__title {
+    font-size: 3rem;
+  }
+
+  .photo-watch {
+    height: auto;
   }
 }
