@@ -15,7 +15,7 @@
     width: 100%;
   }
   .hero-description {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +34,7 @@
   }
 
   header {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   }
 
   .btn-mobile-nav {
@@ -50,7 +50,7 @@
     width: 100%;
     height: 100vh;
     transform: translateX(100%);
-
+    z-index: 888;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,5 +110,74 @@
   .logo-img {
     height: 7.6rem;
     padding-top: 0.2rem;
+  }
+
+  /**/
+  .grid--3-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .to-page {
+    font-size: 1.9rem;
+    padding-top: 1rem;
+  }
+
+  .section-calendar {
+    display: none;
+  }
+
+  .section-hero {
+    padding: 0 1.5rem;
+  }
+  .section-video {
+    padding: 5rem 1.5rem;
+  }
+
+  .videos {
+    row-gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  .video-cell {
+    height: 26rem;
+  }
+
+  .video-message {
+    height: 8rem;
+  }
+
+  .section-gallery {
+    padding: 4.8rem 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    padding: 0 2rem;
+  }
+  .gallery .gallery_img .photo-mixin {
+    height: 13rem;
+  }
+  .section-wtd {
+    padding: 4.8rem 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .heading-secondary {
+    text-align: center;
+    font-size: 2.8rem;
+  }
+
+  .wtd-lists,
+  .wd-lists {
+    border: solid 2px var(--lightyellow);
+    margin: 2rem;
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+  }
+
+  .grid--3-cols {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0;
   }
 }
