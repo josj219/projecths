@@ -108,7 +108,7 @@ a .photo-thumb {
   margin: 0 auto;
   display: grid;
   grid-template-rows: 3fr 1fr;
-  height: 70vh;
+  height: 60vh;
   background-color: var(--darkgrey);
 }
 
