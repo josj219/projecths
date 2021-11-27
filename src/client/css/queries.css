@@ -4,7 +4,7 @@
 /*BELOW 400px = 25rem   /16해서 */
 /*******************************/
 
-@media (max-width: 25rem) {
+@media (max-width: 40rem) {
   .container {
     padding: 0rem;
   }
