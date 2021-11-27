@@ -63,7 +63,11 @@ header {
   background: none;
   cursor: pointer;
   display: none;
-  color: white;
+}
+
+.icon-mobile-nav {
+  color: var(--lightgrey);
+  font-size: 2.8rem;
 }
 
 .icon-mobile-nav[name="close-outline"] {
