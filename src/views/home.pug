@@ -18,7 +18,7 @@ block content
                     | jae
 
                 p.hero-description
-                    | We&apos;ve been together for  
+                    | We&apos;ve been together for
                     span.day-count  000
                     |  days
 
@@ -46,7 +46,7 @@ block content
             h1.heading-primary.home-title 
                 span Schedule
                 span.to-page 
-                    a(href="/schedule") about schedule →
+                    a(href="/schedule") go to plan →
             .wtd.grid.grid--3-cols
                 .wd-lists
                     h1.heading-secondary What we Did
@@ -103,13 +103,13 @@ block content
                             .number 29
                             .number 30
                             .number 31
-        section.section-review
-            .reviews.container
-                h1.heading-primary.home-title 
-                    span Movie Reviews
-                    span.to-page 
-                        a(href="/reviews") more reviews →
-                +review(reviewList)
+    section.section-review
+        .reviews.container
+            h1.heading-primary.home-title 
+                span Reviews
+                span.to-page 
+                    a(href="/reviews") more reviews →
+            +review(reviewList)
 block scripts
     script(src="/static/js/date.js")
     script(src="/static/js/header.js")
