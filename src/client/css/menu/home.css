@@ -5,7 +5,7 @@ body {
 .section-hero {
   padding: 4.2rem 0;
   background-color: var(--purple);
-  height: 80vh;
+  height: 65vh;
 }
 
 .hero {

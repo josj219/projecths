@@ -127,6 +127,7 @@
   }
 
   .section-hero {
+    height: 80vh;
     padding: 0 1.5rem;
   }
   .section-video {
@@ -223,6 +224,20 @@
   }
 
   .photo-watch {
-    height: auto;
+    height: 50vh;
+  }
+  .login-section {
+    height: 60vh;
+  }
+  .photo-watch-section {
+    padding-top: 10rem;
+    height: 65vh;
+  }
+  .backtogallery {
+    font-size: 2rem;
+    padding: 0.3rem;
+  }
+  .photo__title {
+    font-size: 2rem;
   }
 }
