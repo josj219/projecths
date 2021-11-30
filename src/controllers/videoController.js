@@ -94,6 +94,7 @@ export const postUpload = async (req, res) => {
     //console.log(newVideo);
     return res.redirect("/videos");
   } catch (error) {
+    console.log(error);
     return res.status(400).render("videos/upload", {
       pageTitle: "Upload Video",
       errorMessage: error._message,
