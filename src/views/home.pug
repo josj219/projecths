@@ -24,7 +24,10 @@ block content
 
     section.section-video
         .container 
-            h1.heading-primary.home-title Videos
+            h1.heading-primary.home-title 
+                span Videos
+                span.to-page 
+                        a(href="/schedule")  more videos→
             .videos.grid.grid--3-cols
                 each potato in videoList
                     .video-cell
