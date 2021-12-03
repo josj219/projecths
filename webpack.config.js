@@ -10,7 +10,6 @@ module.exports = {
     date: BASE_JS + "date.js",
     commentSection: BASE_JS + "commentSection.js",
     reviewRating: BASE_JS + "reviewRating.js",
-    header: BASE_JS + "header.js",
   },
   plugins: [
     new MiniCssExtractPlugin({

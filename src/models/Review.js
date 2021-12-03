@@ -11,11 +11,6 @@ const reviewSchema = new mongoose.Schema({
   avg_score: {type:Number, default:0}
 });
 
-reviewSchema.static("formatHashtags", function (hashtags) {
-  return hashtags
-    .split(",")
-    .map((word) => (word.startsWith("#") ? word : `#${word}`));
-});
 
 const Review = mongoose.model("Review", reviewSchema);
 export default Review;

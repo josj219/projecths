@@ -134,19 +134,19 @@ export const remove = (req, res) => res.send("Remove User");
 export const seehome = (req, res) => res.render("home", { pageTitle: "HOME" });
 
 export const home = async (req, res) => {
-  const videoListall = await Video.find({}).sort({ when: "desc" });
+  const videoListall = await Video.find({});
+  //.sort({ when: "desc" });
   const photoListall = await Photo.find({});
-  const scheduleListall = await Schedule.find({});
   const reviewListall = await Review.find({});
+  const scheduleListall = await Schedule.find({});
+  //const reviewListall = await Review.find({});
 
-  //const vlen = videoListall.length;
-
+  
   const scheduleListTodo = [];
   const scheduleListDid = [];
-  const videoList = [];
   const photoList = [];
-  //  const reviewList = reviewListall[1];
-  const reviewList = [];
+  const videoList = [];
+
 
   for (var a in scheduleListall) {
     if (scheduleListall[a].status == 1 && scheduleListTodo.length < 3) {
@@ -157,9 +157,12 @@ export const home = async (req, res) => {
     }
   }
 
-  if (reviewListall[0]) {
-    reviewList.push(reviewListall[0]);
+
+  if (reviewListall) {
+    var reviewList = reviewListall[1];
   }
+  console.log(reviewList);
+
 
   if (videoListall[0]) {
     videoList.push(videoListall[0]);
