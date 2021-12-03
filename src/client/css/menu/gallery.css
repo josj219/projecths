@@ -68,10 +68,6 @@ a .photo-thumb {
   position: relative;
   background-color: var(--darkgrey);
 }
-.photo-watch-section {
-  padding-top: 2rem;
-  height: 65vh;
-}
 
 .backtogallery {
   font-size: 2.5rem;
@@ -107,12 +103,16 @@ a .photo-thumb {
   color: var(--darkgrey);
 }
 
+.photo-watch-section {
+  height: 90vh;
+}
+
 .photo-watch {
   max-width: 100rem;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 3fr 1fr;
-  height: 100vw;
+  height: 70vh;
   background-color: var(--darkgrey);
 }
 

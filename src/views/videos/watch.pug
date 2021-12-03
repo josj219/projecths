@@ -36,7 +36,7 @@ block content
         if loggedIn
             div.video__add-comments
                 form.video__comment-form#commentForm
-                    input(type="text", placeholder="    Commment in 25words..." , maxlength="25")
+                    input(type="text", placeholder="    Commment in 25words..." ,  onblur=`placeholder='    Commment in 25words...'`, onfocus=`placeholder=''`,maxlength="25")
                     button Add Comment
         div.video__comments
             ul

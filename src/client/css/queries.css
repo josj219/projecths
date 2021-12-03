@@ -299,6 +299,38 @@
     font-size: 2.2rem;
   }
   #videoContainer {
-    height: 40vh;
+    height: 35vh;
+  }
+  .video__data {
+    padding: 0;
+  }
+  .video__title {
+    font-size: 4rem;
+  }
+
+  .video__when {
+    font-size: 2rem;
+  }
+  .edit_delete {
+    font-size: 1.3rem;
+  }
+  #videoContainer .videoControls .videoControls__play .videoControls__time {
+    font-size: 1rem;
+  }
+  #videoContainer .videoControls {
+    gap: 5px;
+  }
+  .videoControls__time {
+    display: flex;
+  }
+  .videoControls__timeline {
+    width: 12rem;
+  }
+  .videoControls__volume input {
+    width: 5rem;
+  }
+  .video__comments,
+  .video__comment-form {
+    width: 95%;
   }
 }
