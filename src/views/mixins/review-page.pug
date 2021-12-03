@@ -2,7 +2,7 @@ mixin review-page(review)
     a(href=`/reviews/${review.id}`)
       .review-page-mixin
         .review-page-poster
-          img(src="/"+review.fileUrl).poster-image
+          img(src=review.fileUrl).poster-image
         .review-page-result
           .review-movieName #{review.movieName}
           .review-page-avgscore 
