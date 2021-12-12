@@ -56,9 +56,6 @@ export const photoUpload = multer({
 
 export const reviewUpload = multer({
   dest: "uploads/reviews/",
-  limits: {
-    fileSize: 10000000,
-  },
   storage: multerUploader,
 });
 
