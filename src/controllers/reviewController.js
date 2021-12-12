@@ -2,7 +2,7 @@ import Review from "../models/Review";
 //import User from "../models/User";
 
 export const reviewHome = async (req, res) => {
-  const reviewList = await Review.find({});
+  const reviewList = await Review.find({}).sort({ createdAt: "desc" });
   console.log(reviewList);
   return res.render("reviews/reviewList", { pageTitle: "Review", reviewList });
 };
