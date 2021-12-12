@@ -54,7 +54,10 @@ export const reviewWatch = async (req, res) => {
   if (!review) {
     return res.render("404", { pageTitle: "Review not found." });
   }
-  return res.render("reviews/watch", { pageTitle: "reviewWatch", review });
+  return res.render("reviews/watch", {
+    pageTitle: review.movieName,
+    review,
+  });
 };
 
 // galleryHome,postEditGallery,getEditGallery,,galleryWatch

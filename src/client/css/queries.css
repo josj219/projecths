@@ -28,14 +28,13 @@
   }
   .heading-primary {
     font-size: 3.3rem;
-    display: inline;
   }
   .grid--3-cols {
     grid-template-columns: repeat(2, 1fr);
   }
   .video-thumb {
     width: 100%;
-    height: 100%;
+    height: 17rem;
   }
 
   header {
@@ -144,9 +143,10 @@
 
   .videos {
     row-gap: 2rem;
+  }
+  .addpadding {
     padding: 0 2rem;
   }
-
   .video-cell {
     height: 26rem;
   }
@@ -210,6 +210,17 @@
   }
   .reviews {
     padding: 3rem 1rem 3rem 0rem;
+  }
+  .review-page-mixin {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .review-page-poster {
+    width: 15rem;
+    height: 25rem;
+  }
+  .poster-image {
+    object-fit: contain;
   }
   .review-mixin {
     grid-template-columns: auto;
@@ -277,8 +288,13 @@
   .review-title {
     display: flex;
     margin-bottom: 0;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     justify-content: center;
+  }
+  .movie-reviews {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 1rem;
   }
   .photo__title {
     font-size: 3rem;
