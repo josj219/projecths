@@ -280,15 +280,35 @@
   }
   .review-text {
     font-size: 1.8rem;
-    line-height: 0.9;
+    line-height: 1.2;
     text-align: center;
     align-items: center;
     grid-template-rows: 1fr 1.5fr;
+    letter-spacing: -0.05rem;
+    word-break: keep-all;
   }
   .review-title {
     display: flex;
     margin-bottom: 0;
     font-size: 2.8rem;
+    justify-content: center;
+  }
+  .score-avg {
+    width: 100%;
+    text-align: center;
+  }
+
+  .review-movieName {
+    word-break: keep-all;
+    font-size: 2.6rem;
+    text-align: center;
+    letter-spacing: -2px;
+  }
+  .review-page-star {
+    width: 100%;
+  }
+  .review-page-avgscore {
+    flex-direction: column;
     justify-content: center;
   }
   .movie-reviews {
