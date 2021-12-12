@@ -242,6 +242,7 @@
     min-height: 10rem;
     padding: 1rem 1.4rem;
     overflow: hidden;
+    gap: 0;
   }
 
   .review-stars .fa,
