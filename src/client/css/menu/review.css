@@ -1,3 +1,20 @@
+.reviews-home {
+  padding: 7rem 3.5rem 5rem 2rem;
+  max-width: 130rem;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 65vh;
+}
+
+.reviews {
+  background-color: var(--darkgrey);
+  padding: 7rem 3.5rem 5rem 2rem;
+  max-width: 130rem;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 65vh;
+}
+
 .review-mixin {
   width: 100%;
   min-height: 50rem;
@@ -15,8 +32,15 @@
 }
 
 .review-title {
+  font-weight: 700;
+  letter-spacing: -0.2px;
   text-align: center;
+  color: var(--lightpurple);
+  font-size: 4.4rem;
+  line-height: 1.05;
+  margin-bottom: 2.4rem;
 }
+
 .review-movie-poster {
   width: 40rem;
   height: 50rem;
@@ -64,7 +88,7 @@
   grid-template-columns: 1fr 5fr;
   gap: 2.4rem;
   align-items: center;
-  background-color: var(--lightyellow);
+  background-color: var(--2lightpurple);
   padding: 1.2rem 2.4rem;
   border-radius: 11px;
   width: inherit;
@@ -110,6 +134,7 @@
   display: grid;
   padding: 1rem;
   font-weight: 500;
+  color: var(--darkgrey);
 }
 .review-name {
   display: flex;

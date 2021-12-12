@@ -3,8 +3,9 @@ include ../mixins/review
 
 
 block content
-    .reviews.container
-            h1.review-title.heading-primary=review.movieName
+    .reviews
+            h1 
+             .review-title 📽 #{review.movieName} review
             +review(review)
 
 block scripts

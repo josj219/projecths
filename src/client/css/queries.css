@@ -208,6 +208,9 @@
   .section-review {
     padding: 4.8rem 1.5rem;
   }
+  .reviews {
+    padding: 3rem 1rem 3rem 0rem;
+  }
   .review-mixin {
     grid-template-columns: auto;
   }
@@ -264,9 +267,17 @@
     padding-top: 0.5rem;
   }
   .review-text {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 0.9;
     text-align: center;
+    align-items: center;
+    grid-template-rows: 1fr 1.5fr;
+  }
+  .review-title {
+    display: flex;
+    margin-bottom: 0;
+    font-size: 3.2rem;
+    justify-content: center;
   }
   .photo__title {
     font-size: 3rem;
