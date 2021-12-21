@@ -367,8 +367,17 @@
     font-size: 1rem;
   }
   #videoContainer .videoControls {
-    gap: 5px;
+    gap: 13px;
   }
+
+  .fa-expand {
+    font-size: 1.5rem;
+  }
+
+  .videoControls .videoControls__play .videoControls__playBtn {
+    margin: 0px 6px;
+  }
+
   .videoControls__time {
     display: flex;
   }
