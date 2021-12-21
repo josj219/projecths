@@ -374,7 +374,7 @@
     font-size: 1.5rem;
   }
 
-  .videoControls .videoControls__play .videoControls__playBtn {
+  #videoContainer .videoControls .videoControls__play .videoControls__playBtn {
     margin: 0px 6px;
   }
 
@@ -398,5 +398,6 @@
   .video__comment span {
     max-width: 20rem;
     line-height: 1.5;
+    word-break: keep-all;
   }
 }
