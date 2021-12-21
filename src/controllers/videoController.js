@@ -62,6 +62,7 @@ export const getUpload = (req, res) => {
 };
 
 export const postUpload = async (req, res) => {
+  console.log("POST UPload");
   const {
     user: { _id },
   } = req.session;
@@ -91,7 +92,7 @@ export const postUpload = async (req, res) => {
     const user = await User.findById(_id);
     user.videos.push(newVideo._id);
     user.save();
-    //console.log(newVideo);
+    console.log(newVideo);
     return res.redirect("/videos");
   } catch (error) {
     console.log(error);
