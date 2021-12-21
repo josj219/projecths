@@ -362,6 +362,7 @@
   }
   .edit_delete {
     font-size: 1.3rem;
+    width: 100%;
   }
   #videoContainer .videoControls .videoControls__play .videoControls__time {
     font-size: 1rem;

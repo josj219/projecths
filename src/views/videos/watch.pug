@@ -3,7 +3,7 @@ extends ../layouts/base
 block content
     .container
         div#videoContainer(data-id=video._id)
-            video(src=video.fileUrl loop='loop' muted='muted' autoplay='autoplay' playsinline='playsinline')
+            video(src=video.fileUrl loop='loop' muted='muted' playsinline='playsinline')
             div#videoControls.videoControls
                 div.videoControls__play
                     span#play.videoControls__playBtn
