@@ -382,4 +382,12 @@
   .video__comment-form {
     width: 95%;
   }
+  .fa-comment {
+    width: 8.4rem;
+  }
+
+  .video__comment span {
+    max-width: 20rem;
+    line-height: 1.5;
+  }
 }
