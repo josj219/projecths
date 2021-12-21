@@ -18,7 +18,7 @@
   height: 5rem;
   background-color: var(--2lightpurple);
   text-align: center;
-  vertical-align: center;
+  align-items: center;
 }
 .video__comment-form button {
   border-radius: 9999px;
