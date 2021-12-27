@@ -161,7 +161,7 @@ export const home = async (req, res) => {
   if (reviewListall) {
     var reviewList = reviewListall[1];
   }
-  console.log(reviewList);
+  console.log(reviewListall.length);
 
 
   if (videoListall[0]) {
