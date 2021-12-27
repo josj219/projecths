@@ -17,7 +17,7 @@ let controlsMovementTimeout = null;
 let volumeValue = 0.5;
 video.volume = volumeValue;
 
-console.log(video);
+
 console.log("VIDEO PLAYED@@@@@@@@@@@@@@@@@@@@@@");
 
 const handlePlayClick = (e) => {
