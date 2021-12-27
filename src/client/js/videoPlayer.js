@@ -17,9 +17,12 @@ let controlsMovementTimeout = null;
 let volumeValue = 0.5;
 video.volume = volumeValue;
 
+console.log(video);
+
 const handlePlayClick = (e) => {
   if (video.paused) {
     video.play();
+    console.log("CLICKED");
   } else {
     video.pause();
   }
